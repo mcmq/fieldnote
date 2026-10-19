@@ -1,0 +1,25 @@
+# Normalize line endings; Git picks LF in the repo and the OS default on checkout
+* text=auto
+
+# Shell scripts must stay LF
+*.sh text eol=lf
+gradlew text eol=lf
+*.bat text eol=crlf
+
+# Binary files: never diff or convert
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.ttf binary
+*.otf binary
+*.jar binary
+*.keystore binary
+*.jks binary
+
+# Hide generated files from GitHub diffs and language stats
+pubspec.lock linguist-generated
+*.g.dart linguist-generated
+ios/Flutter/Generated.xcconfig linguist-generated
